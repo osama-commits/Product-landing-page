@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes collection landing page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body onload="typeWriter()">
+    <header class="hero">
+      <div class="container spacing">
+        <h1 class="primary-title" id="title"></h1>
+        <p data-aos="fade-down" data-aos-duration="1500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione velit
+          nostrum, dicta cum vero atque sed in perferendis laborum aperiam!
+        </p>
+        <div data-aos="zoom-in" data-aos-duration="1000">
+          <a href="#" class="btn">Have a look.</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="featured">
+        <div class="container">
+          <div data-aos="zoom-in">
+            <h2 class="section-title">Featured products</h2>
+          </div>
+
+          <div
+            class="split"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
+            <a href="" class="featured-item">
+              <img src="shoe1.jpg" alt="" class="featured-img" />
+              <p class="featured-details">
+                <span class="price">$80</span>Shoe name
+              </p>
+            </a>
+
+            <a href="" class="featured-item">
+              <img src="shoe2.jpg" alt="" class="featured-img" />
+              <p class="featured-details">
+                <span class="price">$80</span>Shoe name
+              </p>
+            </a>
+
+            <a href="" class="featured-item">
+              <img src="shoe3.png" alt="" class="featured-img" />
+              <p class="featured-details">
+                <span class="price">$80</span>Shoe name
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="our-products">
+        <div class="container">
+          <h2 class="section-title" data-aos="fade-right">Our products</h2>
+          <article class="product spacing shoe-1">
+            <img
+              src="shoe4.png"
+              alt=""
+              class="product-image"
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            />
+            <div
+              data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <h3 class="product-title">A really nice shoe</h3>
+              <p class="product description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Officia, quibusdam.
+              </p>
+            </div>
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <a href="" class="btn">Buy now</a>
+            </div>
+          </article>
+          <article class="product spacing shoe-2">
+            <img
+              src="shoe5.jpg"
+              alt=""
+              class="product-image"
+              data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            />
+            <div
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <h3 class="product-title">A really nice shoe</h3>
+              <p class="product description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Officia, quibusdam.
+              </p>
+            </div>
+
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <a href="" class="btn">Buy now</a>
+            </div>
+          </article>
+          <article class="product spacing shoe-3">
+            <img
+              src="shoe6.png"
+              alt=""
+              class="product-image"
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            />
+            <div
+              data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <h3 class="product-title">A really nice shoe</h3>
+              <p class="product description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Officia, quibusdam.
+              </p>
+            </div>
+
+            <div
+              data-aos="zoom-in"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <a href="" class="btn">Buy now</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      var i = 0;
+      var txt = "Amazing shoes at a good price."; /* The text */
+      var speed = 75; /* The speed/duration of the effect in milliseconds */
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("title").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+  </body>
+</html>
